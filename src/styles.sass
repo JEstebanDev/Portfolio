@@ -1,1 +1,199 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bulma/css/bulma.css"
+@import "remixicon/fonts/remixicon.css"
+@font-face
+  font-family: FiraCode
+  src: url(fonts/FiraCode-VariableFont_wght.ttf)
+
+// Import component
+//Variables for the colors
+$white : #E5E9F0
+$blue : #4D5BCE
+$green:#43D9AD
+$orange:#E99287
+$button-orange:#FEA55F
+$gray: #607B96
+$color-background:#011627
+
+$breakpoint:799px
+$breakpointSmall:667px
+$breakpointTabletInit:765px
+$breakpointTabletEnd:911px
+
+//Font Family
+
+$fontPrincipal:'FiraCode'
+
+html
+  background-color:$color-background
+
+body
+  font-family: $fontPrincipal !important
+  height: 100%
+  overflow-x: hidden
+  overflow-y: hidden
+
+a
+  color:$orange
+
+a:hover
+  color:$blue
+
+.white-color
+  color:$white
+
+.blue-color
+  color:$blue
+
+.gray-color
+  color:$gray
+
+.green-color
+  color:$green
+
+.footer
+  background-color :$color-background !important
+  padding:  0rem !important
+  position: absolute
+  width: 100%
+  bottom: 0
+
+
+.subtitle-header
+  font-weight: 450
+  font-size: 32px
+  line-height: 42px
+
+.title-name
+  font-weight: 400
+  font-size: 62px
+  line-height: 81px
+
+.border-color
+  border: 1px solid #1E2D3D
+
+.navbar-menu
+  border-left: 1px solid #1E2D3D
+
+.navbar-end
+  border-left: 1px solid #1E2D3D
+
+.shadow
+  position: absolute
+  width: 454px
+  height: 492px
+  left: 1318.16px
+  top: 336.65px
+  opacity: 0.4
+  filter: blur(174px)
+  transform: rotate(13.51deg)
+
+.item-nav
+  border-right: 1px solid #1E2D3D
+  padding-left: 1rem
+  padding-right: 1rem
+  align-items: center
+  display: flex
+  color:$gray
+
+.item-nav:hover
+  color:$white
+  border-bottom: 1.5px solid $orange
+
+.item-nav-footer
+  border-right: 1px solid #1E2D3D
+  padding:0.8rem
+  align-items: center
+  display: flex
+  color:$gray
+
+.item-nav-footer:hover
+  color:$orange
+
+.background-shadow-1
+  position: absolute
+  width: 454px
+  height: 492p
+  left: 1014.08px
+  top: 668.47px
+  background: #43D9AD
+  opacity: 0.4
+  filter: blur(174px)
+  transform: rotate(-94.3deg)
+
+.background-shadow-2
+  position: absolute
+  width: 454px
+  height: 492px
+  left: 1318.16px
+  top: 336.65px
+
+  background: #4D5BCE
+  opacity: 0.4
+  filter: blur(174px)
+  transform: rotate(13.51deg)
+.info-header
+  padding-left: 0rem !important
+  padding-right: 0rem !important
+.info-game
+  padding-top: 15rem
+
+.game
+  border-radius: 35px
+.box-game
+  z-index: 1
+  background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%)
+  border: 1px solid #0C1616
+  box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3)
+  backdrop-filter: blur(64px)
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 8px
+
+.box-keyboard
+  width: 190px
+  height: 160px
+  padding: 5px
+  background: rgba(1, 20, 35, 0.19)
+  border-radius: 8px
+
+.keycap
+  justify-content: center
+  display: inline-block
+  background: #010C15
+  color:$white
+  border: 1px solid #1E2D3D
+  border-radius: 8px
+  margin: 2px
+  padding: 0rem 0.6rem 0rem 0.6rem
+
+.box-shadow
+  background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%)
+
+  backdrop-filter: blur(64px)
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 35px
+  &:before
+    content: ""
+    z-index: -1
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: linear-gradient(31deg, #60efff 36%, #4a8fffb9 50%)
+    transform: translate3d(0px, 0px, 0) scale(0.88)
+    filter: blur(90px)
+    opacity: var(0.24)
+    transition: opacity 0.3s
+    border-radius: inherit
+
+  &::after
+    content: ""
+    z-index: -1
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: inherit
+    border-radius: inherit
