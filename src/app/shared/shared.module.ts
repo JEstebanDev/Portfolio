@@ -17,6 +17,9 @@ import { EducationComponent } from './components/education/education.component';
 import { SideBarProjectComponent } from './components/side-bar-project/side-bar-project.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SideBarContactComponent } from './components/side-bar-contact/side-bar-contact.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { SnippetContactComponent } from './components/snippet-contact/snippet-contact.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     EducationComponent,
     SideBarProjectComponent,
     ProjectsComponent,
+    SideBarContactComponent,
+    ContactFormComponent,
+    SnippetContactComponent,
   ],
   imports: [
     CommonModule,

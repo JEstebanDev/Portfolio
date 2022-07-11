@@ -1,0 +1,28 @@
+<section class="section snippet is-medium gray-color">
+  <span class="pink-color">const</span><span class="blue-color"> button</span> <span class="pink-color"> = </span>
+  <span class="blue-color">document.querySelector</span>
+  (<span class="orange-color">'#sendBtn'</span>);
+  <br>
+  <br>
+  <span class="pink-color">const</span><span class="blue-color"> message</span> <span class="pink-color"> =
+  </span>&#123;
+  <br>
+  <div class="ml-4">
+    <span class="blue-color">name</span>: <span class="orange-color">"{{contact.value['name']}}"</span>,
+    <br>
+    <span class="blue-color">email</span>: <span class="orange-color">"{{contact.value['email']}}"</span>,
+    <br>
+    <span class="blue-color">message</span>: <span class="orange-color">"{{contact.value['message']}}"</span>,
+  </div>
+  &#125;
+  <br>
+  <br>
+  <span class="blue-color">button.addEventListener</span>(<span class="orange-color">'click'</span>), () <span
+    class="pink-color">=></span> &#123;
+  <br>
+  <div class="ml-4">
+    <span class="green-color">form.<span class="blue-color">send</span></span>(<span class="blue-color">message</span>)
+    <br>
+  </div>
+  &#125;);
+</section>

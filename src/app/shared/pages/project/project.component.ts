@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
-import { GetAllRepositories } from '../../interface/getAllRepositories.interface';
 import { ListRepositoriesCustom } from '../../interface/ListRepositoriesCustom.interface';
 import { Topics } from '../../interface/topics.interface';
 import { GitHubService } from '../../service/git-hub.service';
@@ -16,6 +15,7 @@ export class ProjectComponent implements OnInit {
   ) {}
   listProject: Topics[] = [];
   listRepositoriesCustom: ListRepositoriesCustom[] = [];
+  filterList: ListRepositoriesCustom[] = [];
   ngOnInit(): void {
     this.GitHubService.getListAdditionals().subscribe((repositories) => {
       repositories.map((obj: any) => {
@@ -28,7 +28,7 @@ export class ProjectComponent implements OnInit {
           topics: obj.topics,
         });
       });
-
+      this.filterList = this.listRepositoriesCustom;
       repositories
         .map((obj) => obj.topics)
         .forEach((obj: any) => {
@@ -55,7 +55,19 @@ export class ProjectComponent implements OnInit {
     }
   }
 
-  search(values: any) {}
+  search(values: any) {
+    this.filterList = [];
+    if (values.length > 0) {
+      this.listRepositoriesCustom.map((obj) => {
+        let found = obj.topics.filter((e) => values.includes(e));
+        if (found.length > 0) {
+          this.filterList.push(obj);
+        }
+      });
+    } else {
+      this.filterList = this.listRepositoriesCustom;
+    }
+  }
 
   ListTopics: Topics[] = [
     { id: 1, name: 'HTML', url: 'assets/icon-projects/html.svg' },

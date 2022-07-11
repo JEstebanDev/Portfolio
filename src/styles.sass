@@ -11,6 +11,7 @@ $white : #E5E9F0
 $blue : #4D5BCE
 $green:#43D9AD
 $orange:#E99287
+$pink:#C98BDF
 $button-orange:#FEA55F
 $gray: #607B96
 $color-background:#011627
@@ -54,6 +55,9 @@ a:hover
 .blue-color
   color:$blue
 
+.pink-color
+  color:$pink
+
 .blue-color-strong
   color:$blue
   font-weight: bold
@@ -61,9 +65,14 @@ a:hover
 .gray-color
   color:$gray
 
+.background-gray-color
+  color:$gray
 
 .green-color
   color:$green
+
+.orange-color
+  color:$orange
 
 .size-font-small
   font-size: 12px
@@ -106,6 +115,12 @@ a:hover
   background-color:$button-color
 
 .button-color:hover
+  color:$white
+  border-color: $button-color
+  background-color:$gray
+
+button:disabled,
+button[disabled=disabled]
   color:$white
   border-color: $button-color
   background-color:$gray
@@ -173,6 +188,11 @@ a:hover
   padding-left: 0rem !important
   padding-right: 0rem !important
 
+.snippet
+  padding-top: 12rem !important
+  padding-left: 0rem !important
+  padding-right: 0rem !important
+
 .info-game
   padding-top: 15rem
 
@@ -229,6 +249,15 @@ a:hover
   padding-right: 1rem
   padding-top: 0.3rem
   padding-bottom: 0.5rem
+
+.input-form
+  color:$gray
+  background-color:$card-background
+  border-color:  $card-border
+.input-form::placeholder
+  color:$gray
+
+
 
 .list-project
   padding-top: 1rem

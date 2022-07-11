@@ -5,8 +5,8 @@
   </div>
   <div class="column margin-projects">
     <div class="columns scroll-info list-project is-flex is-flex-wrap-wrap is-justify-content-left">
-      <app-projects class="column widthcard" *ngFor="let repositories of listRepositoriesCustom"
-        [repositories]="repositories"></app-projects>
+      <app-projects class="column widthcard" *ngFor="let repositories of filterList" [repositories]="repositories">
+      </app-projects>
     </div>
   </div>
 

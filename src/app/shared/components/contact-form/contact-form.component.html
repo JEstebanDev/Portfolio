@@ -1,0 +1,58 @@
+<h1 class=" white-color is-flex p-3 pt-5 border-color-bottom">Contact me</h1>
+<div class="columns">
+  <div class="column is-6">
+    <section class="section is-medium">
+      <div class="gray-color p-5">
+        <form [formGroup]="contact" class="form-contact">
+          <div class="tooltip">
+            <h1 class="is-size-6">_name:</h1>
+            <span *ngIf="validate('name')" class="tag is-warning">This field is required</span>
+          </div>
+          <p class="control has-icons-left has-icons-right my-3">
+            <input formControlName="name" class="input input-form is-rounded border-orange" type="text"
+              placeholder="Jhon Walker">
+            <span class="icon is-small is-left">
+              <i class="ri-user-line background-gray-color"></i>
+            </span>
+          </p>
+          <div class="tooltip">
+            <h1 class="is-size-6">_email:</h1>
+            <span *ngIf="validate('email')" class="tag is-warning">{{emailText}}</span>
+          </div>
+          <p class="control has-icons-left has-icons-right my-3">
+            <input type="email" formControlName="email" class="input input-form is-rounded border-orange"
+              placeholder="ex: example@gmail.com">
+            <span class="icon is-small is-left ">
+              <i class="ri-mail-line background-gray-color"></i>
+            </span>
+          </p>
+          <div class="tooltip">
+            <h1 class="is-size-6">_message:</h1>
+            <span *ngIf="validate('message')" class="tag is-warning">This field is required</span>
+          </div>
+          <div class="control ">
+            <textarea formControlName="message" class="textarea is-rounded input-form has-fixed-size borders "
+              placeholder="body message"></textarea>
+          </div>
+          <div class="has-text-centered">
+            <form id="my-contact-form" action="https://formsubmit.co/2de8adbee33f65783fad9a9c48dd9195" method="POST">
+
+              <div class="is-invisible">
+                <input type="text" name="name" value="{{contact.value['name']}}">
+                <input type="email" name="email" value="{{contact.value['email']}}">
+                <input type="text" name="message" value="{{contact.value['message']}}">
+              </div>
+              <button type="submit" [disabled]="!contact.valid" class="button size-font-small button-color white-color">
+                <span>Enviar</span><i class="ri-mail-send-line pl-3"></i>
+              </button>
+
+            </form>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="column is-5">
+    <app-snippet-contact [contact]="contact"></app-snippet-contact>
+  </div>
+</div>
