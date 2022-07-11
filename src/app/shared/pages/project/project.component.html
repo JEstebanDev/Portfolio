@@ -1,1 +1,15 @@
-<p>project works!</p>
+<app-nav></app-nav>
+<div class="columns is-flex">
+  <div class="column is-2">
+    <app-side-bar-project [form]="form" [listProject]="listProject" (selected)="search($event)"></app-side-bar-project>
+  </div>
+  <div class="column margin-projects">
+    <div class="columns scroll-info list-project is-flex is-flex-wrap-wrap is-justify-content-left">
+      <app-projects class="column widthcard" *ngFor="let repositories of listRepositoriesCustom"
+        [repositories]="repositories"></app-projects>
+    </div>
+  </div>
+
+
+</div>
+<app-footer></app-footer>

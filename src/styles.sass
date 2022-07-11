@@ -14,6 +14,10 @@ $orange:#E99287
 $button-orange:#FEA55F
 $gray: #607B96
 $color-background:#011627
+$card-background:#011221
+$card-border:#1E2D3D
+$button-color:#1C2B3A
+
 
 $breakpoint:799px
 $breakpointSmall:667px
@@ -39,17 +43,30 @@ a
 a:hover
   color:$blue
 
+.scroll-info
+  overflow: scroll
+  height: 89vh
+  overflow-x: hidden
+
 .white-color
   color:$white
 
 .blue-color
   color:$blue
 
+.blue-color-strong
+  color:$blue
+  font-weight: bold
+
 .gray-color
   color:$gray
 
+
 .green-color
   color:$green
+
+.size-font-small
+  font-size: 12px
 
 .footer
   background-color :$color-background !important
@@ -70,13 +87,28 @@ a:hover
   line-height: 81px
 
 .border-color
-  border: 1px solid #1E2D3D
+  border: 1px solid $card-border
+
+.border-color-right
+  border-right: 1px solid $card-border
+
+.border-color-bottom
+  border-bottom: 1px solid $card-border
 
 .navbar-menu
-  border-left: 1px solid #1E2D3D
+  border-left: 1px solid $card-border
 
 .navbar-end
-  border-left: 1px solid #1E2D3D
+  border-left: 1px solid $card-border
+
+.button-color
+  border-color: $button-color
+  background-color:$button-color
+
+.button-color:hover
+  color:$white
+  border-color: $button-color
+  background-color:$gray
 
 .shadow
   position: absolute
@@ -92,16 +124,20 @@ a:hover
   border-right: 1px solid #1E2D3D
   padding-left: 1rem
   padding-right: 1rem
+  padding-top: 1.5rem
+  padding-bottom: 1rem
   align-items: center
   display: flex
   color:$gray
+
+.margin-projects
+  margin-top: 1.5rem
 
 .item-nav:hover
   color:$white
   border-bottom: 1.5px solid $orange
 
 .item-nav-footer
-  border-right: 1px solid #1E2D3D
   padding:0.8rem
   align-items: center
   display: flex
@@ -132,14 +168,27 @@ a:hover
   opacity: 0.4
   filter: blur(174px)
   transform: rotate(13.51deg)
+
 .info-header
   padding-left: 0rem !important
   padding-right: 0rem !important
+
 .info-game
   padding-top: 15rem
 
+.column
+  padding: 0 !important
+
+.nav-brand
+  flex: none
+  width: 16.66667% !important
+
+.navbar-brand-side
+  height: 90vh
+
 .game
   border-radius: 35px
+
 .box-game
   z-index: 1
   background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%)
@@ -165,6 +214,41 @@ a:hover
   border-radius: 8px
   margin: 2px
   padding: 0rem 0.6rem 0rem 0.6rem
+
+.checkbox:hover
+  color:$orange
+
+.widthcard
+  flex: none
+  width: 21rem
+  margin-right: 20px
+  margin-bottom: 20px
+
+.card-padding
+  padding-left: 1rem
+  padding-right: 1rem
+  padding-top: 0.3rem
+  padding-bottom: 0.5rem
+
+.list-project
+  padding-top: 1rem
+  padding-left: 3rem
+
+.description-height
+  display: flex
+  width: 100%
+  align-items: center
+  height: 4.5rem
+
+.tag-color
+  background-color: $button-orange !important
+
+.card
+  border: 1px solid #1E2D3D
+
+.card-background-color
+  background-color: $card-background
+
 
 .box-shadow
   background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%)
