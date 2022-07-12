@@ -1,0 +1,45 @@
+<p class="gray-color p-3 has-text-justified">// Code snippet showcase:</p>
+<br>
+<div class="px-5">
+  <pre>
+  <code class="javascript">
+    const randomHexColorCode = () => {{'{'}}
+      let n = (Math.random() * 0xfffff * 1000000)
+      .toString(16);
+      return '#' + n.slice(0, 6);
+      {{'}'}};
+    randomHexColorCode(); // "#e34155"
+  </code>
+</pre>
+  <pre>
+  <code class="javascript">
+    const shuffle = ([...arr]) => {{'{'}}
+      let m = arr.length;
+      while (m) {{'{'}}
+        const i = Math.floor(Math.random() * m--);
+        [arr[m], arr[i]] = [arr[i], arr[m]];
+        {{'}'}}
+      return arr;
+    };
+    const foo = [1, 2, 3];
+    shuffle(foo); // [2, 3, 1], foo = [1, 2, 3]
+
+</code>
+</pre>
+
+  <pre>
+  <code class="javascript">
+    const isAnagram = (str1, str2) => {{'{'}}
+      const normalize = str =>
+        str
+          .toLowerCase()
+          .replace(/[^a-z0-9]/gi, '')
+          .split('')
+          .sort()
+          .join('');
+      return normalize(str1) === normalize(str2);
+      {{'}'}};
+    isAnagram('iceman', 'cinema'); // true
+  </code>
+</pre>
+</div>

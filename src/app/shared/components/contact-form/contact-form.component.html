@@ -1,7 +1,7 @@
 <h1 class=" white-color is-flex p-3 pt-5 border-color-bottom">Contact me</h1>
 <div class="columns">
   <div class="column is-6">
-    <section class="section is-medium">
+    <section class="section padding-contact is-medium">
       <div class="gray-color p-5">
         <form [formGroup]="contact" class="form-contact">
           <div class="tooltip">
@@ -43,7 +43,7 @@
                 <input type="text" name="message" value="{{contact.value['message']}}">
               </div>
               <button type="submit" [disabled]="!contact.valid" class="button size-font-small button-color white-color">
-                <span>Enviar</span><i class="ri-mail-send-line pl-3"></i>
+                <span>Send</span><i class="ri-mail-send-line pl-3"></i>
               </button>
 
             </form>

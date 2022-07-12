@@ -12,21 +12,21 @@
     </a>
     <div class="navbar-menu">
       <div class="navbar-start">
-        <a routerLink="/home" class="item-nav">
+        <a routerLink="/home" class="item-nav" [ngClass]="{'is-active':router=='home'}">
           _hello
         </a>
 
-        <a routerLink="/about-me" class="item-nav">
+        <a href="/about-me" class="item-nav" [ngClass]="{'is-active':router=='about-me'}">
           _about-me
         </a>
 
-        <a routerLink="/projects" class="item-nav">
+        <a routerLink="/projects" class="item-nav" [ngClass]="{'is-active':router=='projects'}">
           _projects
         </a>
       </div>
 
       <div class="navbar-end">
-        <a routerLink="/contact-me" class="item-nav">
+        <a routerLink="/contact-me" class="item-nav" [ngClass]="{'is-active':router=='contact-me'}">
           _contact-me
         </a>
       </div>

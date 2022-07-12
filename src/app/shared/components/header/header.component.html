@@ -1,7 +1,6 @@
 <div class="container is-widescreen">
 
   <div class="columns is-flex">
-
     <div class="column">
       <section class="section info-header is-large">
         <h2 class="subtitle is-size-5 white-color">
@@ -24,7 +23,7 @@
       </section>
     </div>
 
-    <div class="column">
+    <div class="column is-hidden-desktop-only is-hidden-touch">
       <section class="section info-header info-game">
         <div class="box-game box-shadow is-flex p-5">
           <canvas id="game" class="game" width="400" height="400"></canvas>
@@ -52,9 +51,14 @@
               </div>
             </div>
           </div>
-
         </div>
-
+      </section>
+    </div>
+    <div class="column is-hidden-widescreen">
+      <section class="section">
+        <figure class="image is-3by4">
+          <img class="image-shadow" src="assets/images/porfile-image.jpg" alt="">
+        </figure>
       </section>
     </div>
   </div>

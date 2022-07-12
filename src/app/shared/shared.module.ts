@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SideBarContactComponent } from './components/side-bar-contact/side-bar-contact.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { SnippetContactComponent } from './components/snippet-contact/snippet-contact.component';
+import { SnippetsComponent } from './components/snippets/snippets.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { SnippetContactComponent } from './components/snippet-contact/snippet-co
     SideBarContactComponent,
     ContactFormComponent,
     SnippetContactComponent,
+    SnippetsComponent,
   ],
   imports: [
     CommonModule,

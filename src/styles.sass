@@ -152,11 +152,19 @@ button[disabled=disabled]
   color:$white
   border-bottom: 1.5px solid $orange
 
+.is-active
+  color:$white
+  border-bottom: 1.5px solid $orange
+
 .item-nav-footer
   padding:0.8rem
   align-items: center
   display: flex
   color:$gray
+
+.snippet-about-me
+  margin-top: 0.8rem
+  border-left:1px solid $card-border
 
 .item-nav-footer:hover
   color:$orange
@@ -185,13 +193,18 @@ button[disabled=disabled]
   transform: rotate(13.51deg)
 
 .info-header
+  padding-top: 15rem !important
   padding-left: 0rem !important
   padding-right: 0rem !important
+
 
 .snippet
   padding-top: 12rem !important
   padding-left: 0rem !important
   padding-right: 0rem !important
+
+.button[disabled], fieldset[disabled] .button
+  background-color: $card-background
 
 .info-game
   padding-top: 15rem
@@ -257,8 +270,6 @@ button[disabled=disabled]
 .input-form::placeholder
   color:$gray
 
-
-
 .list-project
   padding-top: 1rem
   padding-left: 3rem
@@ -278,6 +289,27 @@ button[disabled=disabled]
 .card-background-color
   background-color: $card-background
 
+pre
+  background: none
+  padding:1px 0px 0px 1px !important
+  margin-top: -1.5rem
+
+pre code.hljs
+  padding:0px !important
+  background-color:  $card-background
+  border:1px solid $card-border
+  border-radius: 10px
+
+code.hljs
+  padding:0
+  font-family: $fontPrincipal
+
+.image-shadow
+  border-radius: 20px
+  box-shadow: 0px 0px 28px 4px rgba(55,179,142,0.55)
+
+.drop-shadow
+  filter: drop-shadow(5px 5px 5px rgba(55,179,142,0.55))
 
 .box-shadow
   background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%)
@@ -310,3 +342,45 @@ button[disabled=disabled]
     left: 0
     background: inherit
     border-radius: inherit
+
+
+@media screen and (min-width: 1300px) and (max-width: 1350px)
+  .info-game
+    padding-top:3rem !important
+
+  .info-header
+    padding-top: 7rem !important
+
+  .padding-contact
+    padding-top:4rem !important
+
+  .padding-snippet
+    padding-top:8rem !important
+
+@media screen and (min-width: 1024px) and (max-width: 1185px)
+
+  .info-game
+    padding-top:3rem !important
+
+  .info-header
+    padding-top: 7rem !important
+    padding-left: 3rem !important
+
+  .padding-contact
+    padding-top:4rem !important
+
+  .padding-snippet
+    padding-top:8rem !important
+
+  .column.is-2, .column.is-2-tablet
+    flex: none !important
+    width: 21% !important
+
+  .column.is-10, .column.is-10-tablet
+    flex: none
+    width: 78%
+
+@media screen and ( max-width: 1420px )
+
+@media screen and ( max-width: $breakpoint )
+
