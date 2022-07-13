@@ -1,31 +1,49 @@
 <div class="container is-widescreen">
-
   <div class="columns is-flex">
-    <div class="column">
-      <section class="section info-header is-large">
+    <div class="column background-mobile">
+      <section class="section info-header is-large animate__animated animate__bounceInLeft">
         <h2 class="subtitle is-size-5 white-color">
           Hi all. I am
         </h2>
-        <h1 class="title white-color title-name">Juan Esteban</h1>
+        <h1 class="title white-color title-name animate__animated animate__rubberBand animate__delay-2s">Juan Esteban
+        </h1>
         <h2 class="subtitle blue-color subtitle-header is-flex">
-          <i class="ri-arrow-right-s-line"></i> Full-Stack developer
+          <i class="ri-arrow-right-s-line"></i>
+          <span class="is-hidden-tablet">Full-stack developer</span>
+          <ul class="intro_jobs is-hidden-mobile">
+            <li>Full-stack developer</li>
+            <li>UI/UX Designer</li>
+          </ul>
         </h2>
+        <p class="green-color">
+          I'm a passionate about creating interactive applications and experiences on the web
+        </p>
         <br>
-        <br>
-        <p class="gray-color">
+        <p class="description-mobile is-hidden-widescreen gray-color">
+          <br>
+          // find my profile on <i class="ri-github-line"></i> Github
+          <br>
+          <span class="blue-color animate__animated animate__shakeY animate__delay-2s">const </span><span
+            class="green-color">gitHubLink</span> <span class="white-color">
+            =
+          </span><a href="https://github.com/JEstebanCDev" target="_blank">"github.com/JEstebanCDev"</a>
+        </p>
+        <p class="gray-color is-hidden-desktop-only is-hidden-touch">
           // Play the game <i class="ri-gamepad-line"></i>
           <br>
           // you can also see it on my <i class="ri-github-line "></i> Github page
           <br>
-          <span class="blue-color">const </span><span class="green-color">gitHubLink</span> <span class="white-color"> =
-          </span><a href="https://github.com/JEstebanCDev/SnakeGame">"https://github.com/JEstebanCDev/SnakeGame"</a>
+          <span class="blue-color ">const </span><span class="green-color">gitHubLink</span> <span class="white-color">
+            =
+          </span><a href="https://github.com/JEstebanCDev/SnakeGame"
+            target="_blank">"https://github.com/JEstebanCDev/SnakeGame"</a>
         </p>
       </section>
     </div>
 
-    <div class="column is-hidden-desktop-only is-hidden-touch">
+    <div class="column is-hidden-desktop-only is-hidden-touch animate__animated animate__bounceInRight">
       <section class="section info-header info-game">
-        <div class="box-game box-shadow is-flex p-5">
+        <div class="box-game box-shadow is-flex p-5 animate__animated animate__tada animate__delay-2s">
           <canvas id="game" class="game" width="400" height="400"></canvas>
           <div class="info pt-3 px-3 is-flex is-flex-wrap-wrap is-align-content-center">
             <div class="box-keyboard">
@@ -54,7 +72,7 @@
         </div>
       </section>
     </div>
-    <div class="column is-hidden-widescreen">
+    <div class="column is-hidden-widescreen	is-hidden-mobile animate__animated animate__bounceInRight">
       <section class="section">
         <figure class="image is-3by4">
           <img class="image-shadow" src="assets/images/porfile-image.jpg" alt="">

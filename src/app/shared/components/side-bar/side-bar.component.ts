@@ -3,14 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class SideBarComponent implements OnInit {
+  showItems: boolean = false;
+  showContact: boolean = false;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-image">
-    <figure class="image is-3by2">
-      <img src="https://bulma.io/images/placeholders/480x320.png" alt="Placeholder image">
+    <figure class="image">
+      <img [src]="repositories.imageURL" alt="Placeholder image">
     </figure>
   </div>
   <div class="card-padding card-background-color">
@@ -9,10 +9,11 @@
     <p class="gray-color size-font-small description-height has-text-justified">
       {{repositories.description}}
     </p>
-    <div class="is-flex is-flex-wrap-wrap pb-2">
+    <div class="is-flex is-flex-wrap-wrap pb-2 card-height">
       <span *ngFor="let item of repositories.topics" class="tag tag-color m-1">{{item}}</span>
     </div>
 
-    <a [href]="repositories.htmlURL" class="button size-font-small button-color white-color">view-project</a>
+    <a [href]="repositories.htmlURL" target="_blank"
+      class="button size-font-small button-color white-color">view-project</a>
   </div>
 </div>

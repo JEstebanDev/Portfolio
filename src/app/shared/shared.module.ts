@@ -21,6 +21,7 @@ import { SideBarContactComponent } from './components/side-bar-contact/side-bar-
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { SnippetContactComponent } from './components/snippet-contact/snippet-contact.component';
 import { SnippetsComponent } from './components/snippets/snippets.component';
+import { MainComponent } from './pages/main/main.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { SnippetsComponent } from './components/snippets/snippets.component';
     ContactFormComponent,
     SnippetContactComponent,
     SnippetsComponent,
+    MainComponent,
   ],
   imports: [
     CommonModule,

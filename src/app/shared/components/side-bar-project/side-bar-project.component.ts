@@ -11,6 +11,7 @@ export class SideBarProjectComponent implements OnInit {
   @Input() form!: FormGroup;
   @Input() listProject!: Topics[];
   @Output() selected = new EventEmitter<String[]>();
+  showItems: boolean = false;
   constructor() {}
 
   ngOnInit(): void {}
