@@ -1,7 +1,21 @@
-<div class="navbar-brand-side border-color-right">
-  <h1 class="white-color is-flex p-3 pt-5 border-color-bottom"><i class="ri-arrow-down-s-fill"></i>projects</h1>
+<div class="navbar-brand-side border-color-right is-hidden-mobile">
+  <a class="white-color is-flex p-3 pt-5 border-color-bottom"><i class="ri-arrow-down-s-fill"></i>projects</a>
   <div class="info-personal-info pl-6">
-
+    <form [formGroup]="form" novalidate>
+      <div *ngFor="let topic of listProject; let i=index">
+        <label class="checkbox gray-color is-flex py-2 ">
+          <input class="mr-2" type="checkbox" formArrayName="topics" [value]="topic.name|lowercase"
+            (change)="onCheckboxChange($event)" />
+          <img [src]="topic.url" width="20" height="20" /> <span class="pl-3">{{ topic.name}}</span>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="navbar-brand-side border-color-right is-hidden-tablet">
+  <a (click)="showItems=!showItems" class="white-color is-flex p-3 pt-5 border-color-bottom"><i
+      [ngClass]="showItems==false?'ri-arrow-right-s-fill':'ri-arrow-down-s-fill'"></i>projects</a>
+  <div *ngIf="showItems" class="info-personal-info pl-6">
     <form [formGroup]="form" novalidate>
       <div *ngFor="let topic of listProject; let i=index">
         <label class="checkbox gray-color is-flex py-2 ">

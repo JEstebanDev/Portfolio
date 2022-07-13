@@ -1,4 +1,4 @@
-<h1 class=" white-color is-flex p-3 pt-5 border-color-bottom">Contact me</h1>
+<h1 class=" white-color is-flex p-3 pt-5 border-color-bottom margin-left">Contact me</h1>
 <div class="columns">
   <div class="column is-6">
     <section class="section padding-contact is-medium">
@@ -30,7 +30,7 @@
             <h1 class="is-size-6">_message:</h1>
             <span *ngIf="validate('message')" class="tag is-warning">This field is required</span>
           </div>
-          <div class="control ">
+          <div class="control my-3">
             <textarea formControlName="message" class="textarea is-rounded input-form has-fixed-size borders "
               placeholder="body message"></textarea>
           </div>
@@ -42,7 +42,8 @@
                 <input type="email" name="email" value="{{contact.value['email']}}">
                 <input type="text" name="message" value="{{contact.value['message']}}">
               </div>
-              <button type="submit" [disabled]="!contact.valid" class="button size-font-small button-color white-color">
+              <button type="submit" [disabled]="!contact.valid"
+                class="button size-font-small button-color white-color animate__animated animate__heartBeat animate__delay-2s">
                 <span>Send</span><i class="ri-mail-send-line pl-3"></i>
               </button>
 
@@ -52,7 +53,7 @@
       </div>
     </section>
   </div>
-  <div class="column is-5">
+  <div class="column is-5 is-hidden-mobile">
     <app-snippet-contact [contact]="contact"></app-snippet-contact>
   </div>
 </div>

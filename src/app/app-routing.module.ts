@@ -6,46 +6,53 @@ import { InterestsComponent } from './shared/components/interests/interests.comp
 import { AboutMeComponent } from './shared/pages/about-me/about-me.component';
 import { ContactMeComponent } from './shared/pages/contact-me/contact-me.component';
 import { HomeComponent } from './shared/pages/home/home.component';
+import { MainComponent } from './shared/pages/main/main.component';
 import { ProjectComponent } from './shared/pages/project/project.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: 'about-me',
-    component: AboutMeComponent,
+    component: MainComponent,
     children: [
       {
-        path: 'bio',
-        component: BiographyComponent,
+        path: '',
+        component: HomeComponent,
       },
       {
-        path: 'interests',
-        component: InterestsComponent,
+        path: 'home',
+        component: HomeComponent,
       },
       {
-        path: 'education',
-        component: EducationComponent,
+        path: 'about-me',
+        component: AboutMeComponent,
+        children: [
+          {
+            path: 'bio',
+            component: BiographyComponent,
+          },
+          {
+            path: 'interests',
+            component: InterestsComponent,
+          },
+          {
+            path: 'education',
+            component: EducationComponent,
+          },
+          {
+            path: '**',
+            redirectTo: 'bio',
+          },
+        ],
       },
       {
-        path: '**',
-        redirectTo: 'bio',
+        path: 'projects',
+        component: ProjectComponent,
+      },
+      {
+        path: 'contact-me',
+        component: ContactMeComponent,
       },
     ],
-  },
-  {
-    path: 'projects',
-    component: ProjectComponent,
-  },
-  {
-    path: 'contact-me',
-    component: ContactMeComponent,
   },
 ];
 

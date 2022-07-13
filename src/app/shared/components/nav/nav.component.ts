@@ -12,4 +12,11 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     this.router = this.route.url.split('/', 2)[1];
   }
+  mobileNavbar: boolean = false;
+  navbar() {
+    this.mobileNavbar = !this.mobileNavbar;
+  }
+  hidePopup() {
+    this.mobileNavbar = false;
+  }
 }

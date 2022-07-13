@@ -23,7 +23,9 @@ export class ProjectComponent implements OnInit {
           id: obj.id,
           description: obj.description,
           htmlURL: obj.html_url,
-          imageURL: obj.html_url + `/blob/main/${obj.name.toLowerCase()}.jpg`,
+          imageURL: `https://raw.githubusercontent.com//JEstebanCDev/${
+            obj.name
+          }/main/${obj.name.toLowerCase()}.jpg`,
           name: obj.name,
           topics: obj.topics,
         });
