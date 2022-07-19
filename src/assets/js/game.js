@@ -55,13 +55,13 @@ class SnakeGame {
     }
   }
   draw() {
-    this.context.fillStyle = "#011627";
+    this.context.fillStyle = "#0b0618";
     this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.context.fillStyle = "white";
     this.context.font = "20px Arial";
     this.context.fillText(this.tailSize - 5, 20, 40);
 
-    this.context.fillStyle = "#4D5BCE";
+    this.context.fillStyle = "#2a7ec6";
     this.trail.forEach((t) => {
       this.context.fillRect(
         t.positionX * this.gridSize,
@@ -71,7 +71,7 @@ class SnakeGame {
       );
     });
 
-    this.context.fillStyle = "#FEA55F";
+    this.context.fillStyle = "#fac029";
     this.context.fillRect(
       this.appleX * this.gridSize,
       this.appleY * this.gridSize,

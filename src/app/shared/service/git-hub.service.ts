@@ -7,7 +7,7 @@ import { GetAllRepositories } from '../interface/getAllRepositories.interface';
 })
 export class GitHubService {
   private _urlBackendApi: string =
-    'https://api.github.com/users/jestebancdev/repos?sort=created';
+    'https://api.github.com/users/jestebandev/repos?sort=created';
 
   constructor(private http: HttpClient) {}
 
