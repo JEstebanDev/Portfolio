@@ -112,7 +112,7 @@ a:hover
 .footer
   background-color :$color-background !important
   padding:  0rem !important
-  position: absolute
+  position: fixed
   width: 100%
   bottom: 0
 
@@ -243,22 +243,9 @@ button[disabled=disabled]
   filter: blur(174px)
   transform: rotate(13.51deg)
 
-.info-header
-  padding-top: 15rem !important
-  padding-left: 0rem !important
-  padding-right: 0rem !important
-
-
-.snippet
-  padding-top: 12rem !important
-  padding-left: 0rem !important
-  padding-right: 0rem !important
 
 .button[disabled], fieldset[disabled] .button
   background-color: $card-background
-
-.info-game
-  padding-top: 15rem
 
 .column
   padding: 0 !important
@@ -341,6 +328,8 @@ button[disabled=disabled]
   background-color: $card-background
 
 
+
+
 pre
   background: none
   padding:1px 0px 0px 1px !important
@@ -412,27 +401,23 @@ code.hljs
   align-content: center
   height: 6.5rem
 
-@media screen and (min-width: 1300px) and (max-width: 1350px)
-  .info-game
-    padding-top:3rem !important
-
+@media screen and (min-width: 1700px)
   .info-header
-    padding-top: 7rem !important
+    padding-top: 12rem
+
+  .info-game
+    padding-bottom: 10rem
 
   .padding-contact
-    padding-top:4rem !important
+    padding-top: 8rem
 
   .padding-snippet
-    padding-top:8rem !important
+    padding-top: 12rem
 
 @media screen and (min-width: 1024px) and (max-width: 1185px)
 
-  .info-game
-    padding-top:3rem !important
-
   .info-header
-    padding-top: 7rem !important
-    padding-left: 3rem !important
+    padding-left: 5rem !important
 
   .padding-contact
     padding-top:4rem !important
@@ -462,7 +447,7 @@ code.hljs
     background-image: url("assets/images/porfile-image.jpg") !important
 
   .info-header
-    padding-top: 10rem !important
+   // padding-top: 7rem !important
     padding-left: 2rem !important
     padding-right: 2rem !important
 
@@ -473,12 +458,13 @@ code.hljs
     width: 100%
     bottom: 0
 
+
+
   .navbar-menu
     background: $card-background
     padding-left: 30px
     padding-right: 30px
     margin-top: 3rem
-    border-left:none
 
   .navbar-end
     border-left:0px
