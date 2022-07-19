@@ -1,7 +1,13 @@
+<div class="pb-2 has-text-centered is-hidden-widescreen is-hidden-desktop-only">
+  <a class="gray-color description-mobile" href="https://www.behance.net/darelova" target="_blank">
+    Design by ❤️ Dare Lova
+  </a>
+</div>
 <div class="columns is-flex border-color">
-  <div class="column is-2 item-nav">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+  <div class="column mt-2 is-2 item-nav">
+    <a class="is-flex is-align-items-center ml-4" href="/home">
+      <img src="assets/logo.png" width="45">
+      <span class="navbar-text">JEstebanDev</span>
     </a>
   </div>
   <div class="column is-10 is-flex">
@@ -14,21 +20,23 @@
     <div class="blocker" [ngClass]="{'is-hidden':mobileNavbar==false}" (click)="hidePopup()"></div>
     <div class="navbar-menu stack-top borders" [ngClass]="{'is-active':mobileNavbar}">
       <div class="navbar-start">
-        <a routerLink="/home" class="item-nav" [ngClass]="{'is-active':router=='home'}">
+        <a (click)="router='home'" routerLink="/home" class="item-nav" [ngClass]="{'is-active':router=='home'}">
           _hello
         </a>
 
-        <a href="/about-me" class="item-nav" [ngClass]="{'is-active':router=='about-me'}">
+        <a (click)="router='about-me'" href="/about-me" class="item-nav" [ngClass]="{'is-active':router=='about-me'}">
           _about-me
         </a>
 
-        <a routerLink="/projects" class="item-nav" [ngClass]="{'is-active':router=='projects'}">
+        <a (click)="router='projects'" routerLink="/projects" class="item-nav"
+          [ngClass]="{'is-active':router=='projects'}">
           _projects
         </a>
       </div>
 
       <div class="navbar-end">
-        <a routerLink="/contact-me" class="item-nav" [ngClass]="{'is-active':router=='contact-me'}">
+        <a (click)="router='contact-me'" routerLink="/contact-me" class="item-nav"
+          [ngClass]="{'is-active':router=='contact-me'}">
           _contact-me
         </a>
       </div>

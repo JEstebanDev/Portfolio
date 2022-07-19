@@ -22,7 +22,7 @@ export class ContactFormComponent implements OnInit {
   validate(variable: string) {
     if (this.contact.controls['email'].errors != null) {
       if (this.contact.controls['email'].errors!['pattern'] != null) {
-        this.emailText = 'The format of the email should be ejemplo@gmail.com';
+        this.emailText = 'The format of the email should be example@gmail.com';
       }
       if (this.contact.controls['email'].errors!['required'] != null) {
         this.emailText = 'This field is required';

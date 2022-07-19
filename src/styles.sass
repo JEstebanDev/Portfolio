@@ -9,16 +9,17 @@
 // Import component
 //Variables for the colors
 $white : #E5E9F0
-$blue : #4D5BCE
-$green:#43D9AD
-$orange:#E99287
-$pink:#C98BDF
-$button-orange:#FEA55F
+$blue : #5ec0ea
+$green:#f6d855
+$orange:#f09258
+$pink:#ac58ec
+$button-orange:#f9b11f
 $gray: #607B96
-$color-background:#011627
-$card-background:#011221
-$card-border:#1E2D3D
-$button-color:#1C2B3A
+$color-background:#0b0618
+$card-background:#0b0618
+$card-border:#2c1e3d
+$button-color:#9a3fdb
+$button-color-hover: #37005e
 
 
 $breakpoint:799px
@@ -44,6 +45,8 @@ a
 
 a:hover
   color:$blue
+
+
 .scroll-info
   overflow: scroll
   height: 89vh
@@ -133,8 +136,27 @@ a:hover
 .border-color-bottom
   border-bottom: 1px solid $card-border
 
+.navbar-text
+  margin-left: 1rem
+  font-size: 20px
+  color:$gray
+
+.navbar-burger
+  color: $green
+  height: 4.25rem
+  width: 4.25rem
+
+.navbar-burger span
+  height: 2px
+  width: 20px
+
 .navbar-menu
   border-left: 1px solid $card-border
+
+.navbar-item img
+  margin-top: 5px
+  max-height: 3rem
+
 
 .navbar-end
   border-left: 1px solid $card-border
@@ -146,7 +168,7 @@ a:hover
 .button-color:hover
   color:$white
   border-color: $button-color
-  background-color:$gray
+  background-color:$button-color-hover
 
 button:disabled,
 button[disabled=disabled]
@@ -165,7 +187,7 @@ button[disabled=disabled]
   transform: rotate(13.51deg)
 
 .item-nav
-  border-right: 1px solid #1E2D3D
+  border-right: 1px solid $card-border
   padding-left: 1rem
   padding-right: 1rem
   padding-top: 1.5rem
@@ -179,11 +201,11 @@ button[disabled=disabled]
 
 .item-nav:hover
   color:$white
-  border-bottom: 1.5px solid $orange
+  border-bottom: 1.5px solid $blue
 
 .is-active
   color:$white
-  border-bottom: 1.5px solid $orange
+  border-bottom: 1.5px solid $blue
 
 .item-nav-footer
   padding:0.8rem
@@ -196,7 +218,7 @@ button[disabled=disabled]
   border-left:1px solid $card-border
 
 .item-nav-footer:hover
-  color:$orange
+  color:$blue
 
 .background-shadow-1
   position: absolute
@@ -253,7 +275,7 @@ button[disabled=disabled]
 
 .box-game
   z-index: 1
-  background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%)
+  background: linear-gradient(150.26deg, rgb(70 23 85 / 70%) 1.7%, rgb(67 127 217 / 0%) 81.82%)
   border: 1px solid #0C1616
   box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3)
   backdrop-filter: blur(64px)
@@ -272,7 +294,7 @@ button[disabled=disabled]
   display: inline-block
   background: #010C15
   color:$white
-  border: 1px solid #1E2D3D
+  border: 1px solid $card-border
   border-radius: 8px
   margin: 2px
   padding: 0rem 0.6rem 0rem 0.6rem
@@ -313,7 +335,7 @@ button[disabled=disabled]
   background-color: $button-orange !important
 
 .card
-  border: 1px solid #1E2D3D
+  border: 1px solid $card-border
 
 .card-background-color
   background-color: $card-background
@@ -336,18 +358,17 @@ code.hljs
 
 .image-shadow
   border-radius: 20px
-  box-shadow: 0px 0px 28px 4px rgba(55,179,142,0.55)
+  box-shadow: 0px 0px 28px 4px #6d37b38c
 
 .drop-shadow
-  filter: drop-shadow(5px 5px 5px rgba(55,179,142,0.55))
+  filter: drop-shadow(5px 5px 5px #6d37b38c)
 
 .card:hover
-  box-shadow: 0px 8px 8px 0px  rgba(55,179,142,0.55)
+  box-shadow: 0px 8px 8px 0px  #6d37b38c
   transform: scale(1.05, 1.05)
 
 .box-shadow
-  background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%)
-
+  background: linear-gradient(150.26deg, rgb(64 23 85 / 70%) 1.7%, rgb(67 127 217 / 8%) 81.82%)
   backdrop-filter: blur(64px)
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 35px
@@ -359,7 +380,7 @@ code.hljs
     right: 0
     bottom: 0
     left: 0
-    background: linear-gradient(31deg, #60efff 36%, #4a8fffb9 50%)
+    background: linear-gradient(31deg, #6063ff 36%, #7593f7b9 50%)
     transform: translate3d(0px, 0px, 0) scale(0.88)
     filter: blur(90px)
     opacity: var(0.24)
@@ -435,7 +456,7 @@ code.hljs
     font-size: 13px
 
   .background-mobile
-    height: 95vh
+    height: 90vh
     margin-top: 12px
     background-size: cover
     background-image: url("assets/images/porfile-image.jpg") !important
