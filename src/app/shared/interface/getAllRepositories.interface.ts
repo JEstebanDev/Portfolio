@@ -108,7 +108,7 @@ export interface Owner {
   siteAdmin: boolean;
 }
 export enum Login {
-  JEstebanCDev = 'JEstebanCDev',
+  JEstebanDev = 'JEstebanDev',
 }
 
 export enum NodeID {
