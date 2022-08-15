@@ -77,6 +77,9 @@ a:hover
 .orange-color
   color:$orange
 
+.white-color
+  color:$white !important
+
 .size-font-small
   font-size: 12px
 
@@ -414,6 +417,13 @@ code.hljs
   .padding-snippet
     padding-top: 12rem
 
+  .contact-me-buttom
+    background: #9a3fdb
+    color:  $white !important
+
+  .contact-me-buttom:hover
+    background: $button-color-hover
+
 @media screen and (min-width: 1024px) and (max-width: 1185px)
 
   .info-header
@@ -433,6 +443,13 @@ code.hljs
     flex: none
     width: 78%
 
+  .contact-me-buttom
+    background: #9a3fdb
+    color: $white !important
+
+  .contact-me-buttom:hover
+    background: $button-color-hover
+
 @media screen and ( max-width: $breakpoint )
   .item-nav
     border-right: none
@@ -444,7 +461,7 @@ code.hljs
     height: 90vh
     margin-top: 12px
     background-size: cover
-    background-image: url("assets/images/porfile-image.jpg") !important
+    background-image: linear-gradient(rgba(0 0 0 / 45%), rgba(17 8 34 / 32%)),url(assets/images/profile-image.jpg)
 
   .info-header
    // padding-top: 7rem !important
