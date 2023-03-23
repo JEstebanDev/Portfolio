@@ -3,9 +3,9 @@
     Design by ❤️ Darelova
   </a>
 </div>
-<div class="columns is-flex border-color">
-  <div class="column mt-2 is-2 item-nav">
-    <a class="is-flex is-align-items-center ml-4" href="/home">
+<div class="columns is-flex mt-2">
+  <div class="column is-2 item-nav">
+    <a class="is-flex is-align-items-center ml-6" href="/home">
       <img src="assets/logo.png" width="45">
       <span class="navbar-text">JEstebanDev</span>
     </a>
@@ -21,25 +21,21 @@
     <div class="navbar-menu stack-top borders" [ngClass]="{'is-active':mobileNavbar}">
       <div class="navbar-start">
         <a (click)="router='home'" routerLink="/home" class="item-nav" [ngClass]="{'is-active':router=='home'}">
-          _hello
+          Hello <i class="ml-1 ri-user-smile-line"></i>
         </a>
-
         <a (click)="router='about-me'" href="/about-me" class="item-nav" [ngClass]="{'is-active':router=='about-me'}">
-          _about-me
+          About me<i class="ml-1 ri-folder-2-line"></i>
         </a>
-
         <a (click)="router='projects'" routerLink="/projects" class="item-nav"
           [ngClass]="{'is-active':router=='projects'}">
-          _projects
+          Projects<i class="ml-1 ri-apps-line"></i>
         </a>
       </div>
-
-      <div class="navbar-end contact-me-buttom">
-        <a (click)="router='contact-me'" routerLink="/contact-me" class="item-nav white-color"
-          [ngClass]="{'is-active':router=='contact-me'}">
-          _contact-me
-        </a>
-      </div>
+      <a (click)="router='contact-me'" routerLink="/contact-me"
+        class="item-nav is-flex contact-me-buttom white-color animate__animated animate__rubberBand animate__delay-4s"
+        [ngClass]="{'is-active':router=='contact-me'}">
+        Let's talk!<i class="ml-1 ri-chat-3-line"></i>
+      </a>
     </div>
   </div>
 

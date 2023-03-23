@@ -1,5 +1,5 @@
-<div class="navbar-brand-side border-color-right is-hidden-mobile">
-  <a class="white-color is-flex p-3 pt-5 border-color-bottom"><i class="ri-arrow-down-s-fill"></i>projects</a>
+<div class="navbar-brand-side is-hidden-mobile">
+  <a class="white-color is-flex p-3 pt-5"><i class="ri-arrow-down-s-fill"></i>projects</a>
   <div class="info-personal-info pl-6">
     <form [formGroup]="form" novalidate>
       <div *ngFor="let topic of listProject; let i=index">
@@ -12,12 +12,12 @@
     </form>
   </div>
 </div>
-<div class="navbar-brand-side border-color-right is-hidden-tablet">
-  <a (click)="showItems=!showItems" class="white-color is-flex p-3 pt-5 border-color-bottom"><i
+<div class="navbar-brand-side is-hidden-tablet">
+  <a (click)="showItems=!showItems" class="white-color is-flex p-3 pt-5"><i
       [ngClass]="showItems==false?'ri-arrow-right-s-fill':'ri-arrow-down-s-fill'"></i>projects</a>
   <div *ngIf="showItems" class="info-personal-info pl-6">
-    <form [formGroup]="form" novalidate>
-      <div *ngFor="let topic of listProject; let i=index">
+    <form class="is-flex is-flex-wrap-wrap" [formGroup]="form" novalidate>
+      <div *ngFor="let topic of listProject; let i=index" class="size-item">
         <label class="checkbox gray-color is-flex py-2 ">
           <input class="mr-2" type="checkbox" formArrayName="topics" [value]="topic.name|lowercase"
             (change)="onCheckboxChange($event)" />
