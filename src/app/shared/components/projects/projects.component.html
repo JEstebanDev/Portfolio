@@ -1,10 +1,8 @@
 <div class="card">
-  <div class="card-image">
-    <figure class="image">
-      <img [src]="repositories.imageURL" alt="Placeholder image">
-    </figure>
-  </div>
-  <div class="card-padding card-background-color">
+  <figure class="image">
+    <img class="borders" [src]="repositories.imageURL" alt="Placeholder image">
+  </figure>
+  <div class="card-padding">
     <h1 class="blue-color-strong">{{repositories.name}}</h1>
     <p class="gray-color size-font-small description-height has-text-justified">
       {{repositories.description}}
@@ -13,7 +11,7 @@
       <span *ngFor="let item of repositories.topics" class="tag tag-color m-1 has-text-black">{{item}}</span>
     </div>
 
-    <a [href]="repositories.htmlURL" target="_blank"
-      class="button size-font-small button-color white-color">view-project</a>
+    <a [href]="repositories.htmlURL" target="_blank" class="button size-font-small button-color white-color">View
+      project<i class="ri-arrow-right-s-line"></i></a>
   </div>
 </div>

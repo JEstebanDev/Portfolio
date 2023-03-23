@@ -1,19 +1,19 @@
-<div class="navbar-brand-side border-color-right is-hidden-mobile">
-  <a class="white-color is-flex p-3 pt-5 border-color-bottom"><i class="ri-arrow-down-s-fill"></i>personal-info</a>
+<div class="navbar-brand-side border-color is-hidden-mobile">
+  <a class="white-color is-flex p-3 pt-5"><i class="ri-arrow-down-s-fill"></i>personal-info</a>
   <div class="info-personal-info">
     <a routerLink="/about-me/bio" class="is-flex ml-2 p-3"><i class="ri-arrow-right-s-line"></i> biography</a>
     <a routerLink="/about-me/interests" class="is-flex ml-2 p-3"><i class="ri-arrow-right-s-line"></i>interests</a>
     <a routerLink="/about-me/education" class="is-flex ml-2 p-3"><i class="ri-arrow-right-s-line"></i>education</a>
   </div>
-  <a class="white-color is-flex p-3 border-color"><i class="ri-arrow-down-s-fill"></i>contacts</a>
+  <a class="white-color is-flex p-3"><i class="ri-arrow-down-s-fill"></i>contacts</a>
   <div class="info-personal-info">
     <a href="mailto:castanoesteban9@gmail.com" class="is-flex ml-2 p-3"><i class="ri-mail-line mr-2"></i>send me an
       email</a>
   </div>
 </div>
 
-<div class="navbar-brand-side border-color-right is-hidden-tablet">
-  <a (click)="showItems=!showItems" class="white-color is-flex p-3 pt-5 border-color-bottom"><i
+<div class="navbar-brand-side border-color is-hidden-tablet">
+  <a (click)="showItems=!showItems" class="white-color is-flex p-3 pt-5"><i
       [ngClass]="showItems==false?'ri-arrow-right-s-fill':'ri-arrow-down-s-fill'"></i> <i
       class="ri-folder-fill mr-1"></i>personal-info</a>
   <div *ngIf="showItems" class="info-personal-info">
@@ -21,7 +21,7 @@
     <a routerLink="/about-me/interests" class="is-flex ml-2 p-3"><i class="ri-arrow-right-s-line"></i>interests</a>
     <a routerLink="/about-me/education" class="is-flex ml-2 p-3"><i class="ri-arrow-right-s-line"></i>education</a>
   </div>
-  <a (click)="showContact=!showContact" class="white-color is-flex p-3 border-color"><i
+  <a (click)="showContact=!showContact" class="white-color is-flex p-3"><i
       [ngClass]="showContact==false?'ri-arrow-right-s-fill':'ri-arrow-down-s-fill'"></i> <i
       class="ri-folder-fill mr-1"></i>contacts</a>
   <div *ngIf="showContact" class="info-personal-info">

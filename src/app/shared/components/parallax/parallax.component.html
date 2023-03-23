@@ -1,0 +1,25 @@
+<div class="parallax-container is-hidden-touch">
+  <ng-container *ngFor="let item of parallax_item">
+    <ng-container [ngSwitch]="item.size">
+      <ng-template ngSwitchCase="tiny">
+        <span parallaxItem [top]="item.top" [left]="item.left" [rotate]="item.rotate" [inversion]="item.inversion"
+          [opacity]="item.opacity" [movement]="item.movement"><img [src]="item.src" class="parallax-conf tiny" /></span>
+      </ng-template>
+      <ng-template ngSwitchCase="small">
+        <span parallaxItem [top]="item.top" [left]="item.left" [rotate]="item.rotate" [inversion]="item.inversion"
+          [opacity]="item.opacity" [movement]="item.movement"><img [src]="item.src"
+            class="parallax-conf small" /></span>
+      </ng-template>
+      <ng-template ngSwitchCase="middle">
+        <span parallaxItem [top]="item.top" [left]="item.left" [rotate]="item.rotate" [inversion]="item.inversion"
+          [opacity]="item.opacity" [movement]="item.movement"><img [src]="item.src"
+            class="parallax-conf middle" /></span>
+      </ng-template>
+      <ng-template ngSwitchCase="big">
+        <span parallaxItem [top]="item.top" [left]="item.left" [rotate]="item.rotate" [inversion]="item.inversion"
+          [opacity]="item.opacity" [movement]="item.movement"><img [src]="item.src" class="parallax-conf big" /></span>
+      </ng-template>
+      <ng-template ngSwitchDefault>loading</ng-template>
+    </ng-container>
+  </ng-container>
+</div>

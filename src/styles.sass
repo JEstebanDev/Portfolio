@@ -16,11 +16,11 @@ $pink:#ac58ec
 $button-orange:#f9b11f
 $gray: #607B96
 $color-background:#0b0618
-$card-background:#0b0618
+$card-background:#150526
+$navbar-background:#1d0f38
 $card-border:#2c1e3d
 $button-color:#9a3fdb
 $button-color-hover: #37005e
-
 
 $breakpoint:799px
 $breakpointSmall:667px
@@ -49,7 +49,7 @@ a:hover
 
 .scroll-info
   overflow: scroll
-  height: 89vh
+  height: 95vh
   overflow-x: hidden
 
 .white-color
@@ -99,7 +99,6 @@ a:hover
   left: 0
   width: 100%
   height: 100%
-  border-left: 1px solid $blue
   position: absolute
   background: $color-background
   animation: typing 2s steps(15) infinite
@@ -113,7 +112,7 @@ a:hover
     top: -100px
 
 .footer
-  background-color :$color-background !important
+  background-color :#00000000
   padding:  0rem !important
   position: fixed
   width: 100%
@@ -130,15 +129,6 @@ a:hover
   font-size: 62px
   line-height: 81px
 
-.border-color
-  border: 1px solid $card-border
-
-.border-color-right
-  border-right: 1px solid $card-border
-
-.border-color-bottom
-  border-bottom: 1px solid $card-border
-
 .navbar-text
   margin-left: 1rem
   font-size: 20px
@@ -153,30 +143,22 @@ a:hover
   height: 2px
   width: 20px
 
-.navbar-menu
-  border-left: 1px solid $card-border
-
 .navbar-item img
   margin-top: 5px
   max-height: 3rem
 
-
-.navbar-end
-  border-left: 1px solid $card-border
-
 .button-color
-  border-color: $button-color
   background-color:$button-color
+  border-color: $pink
 
 .button-color:hover
   color:$white
-  border-color: $button-color
+  border-color: $button-color-hover
   background-color:$button-color-hover
 
 button:disabled,
 button[disabled=disabled]
   color:$white
-  border-color: $button-color
   background-color:$gray
 
 .shadow
@@ -190,11 +172,7 @@ button[disabled=disabled]
   transform: rotate(13.51deg)
 
 .item-nav
-  border-right: 1px solid $card-border
-  padding-left: 1rem
-  padding-right: 1rem
-  padding-top: 1.5rem
-  padding-bottom: 1rem
+  padding:1rem
   align-items: center
   display: flex
   color:$gray
@@ -204,11 +182,12 @@ button[disabled=disabled]
 
 .item-nav:hover
   color:$white
-  border-bottom: 1.5px solid $blue
 
 .is-active
   color:$white
-  border-bottom: 1.5px solid $blue
+  background-color:$navbar-background
+  border-bottom: 1.5px solid $pink
+  border-radius: 1rem
 
 .item-nav-footer
   padding:0.8rem
@@ -216,9 +195,24 @@ button[disabled=disabled]
   display: flex
   color:$gray
 
+
+.item-nav-footer-social
+  color:$white
+  background-color:$color-background
+  border-top: 1.5px solid $pink
+  border-top-right-radius: 1.5rem
+  border-bottom-right-radius: 1.5rem
+
+.item-nav-footer-design
+  color:$white
+  background-color:$color-background
+  border-top: 1.5px solid $pink
+  border-top-left-radius: 1.5rem
+  border-bottom-left-radius: 1.5rem
+
+
 .snippet-about-me
   margin-top: 0.8rem
-  border-left:1px solid $card-border
 
 .item-nav-footer:hover
   color:$blue
@@ -248,7 +242,7 @@ button[disabled=disabled]
 
 
 .button[disabled], fieldset[disabled] .button
-  background-color: $card-background
+  background-color: $color-background
 
 .column
   padding: 0 !important
@@ -260,13 +254,15 @@ button[disabled=disabled]
 .navbar-brand-side
   height: 90vh
 
+.border-color
+  border-right: 1px solid $card-border
+
 .game
   border-radius: 35px
 
 .box-game
   z-index: 1
   background: linear-gradient(150.26deg, rgb(70 23 85 / 70%) 1.7%, rgb(67 127 217 / 0%) 81.82%)
-  border: 1px solid #0C1616
   box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3)
   backdrop-filter: blur(64px)
   /* Note: backdrop-filter has minimal browser support */
@@ -284,19 +280,18 @@ button[disabled=disabled]
   display: inline-block
   background: #010C15
   color:$white
-  border: 1px solid $card-border
   border-radius: 8px
   margin: 2px
   padding: 0rem 0.6rem 0rem 0.6rem
 
 .checkbox:hover
-  color:$orange
+  color:$blue
 
 .widthcard
   flex: none
   width: 21rem
-  margin-right: 20px
-  margin-bottom: 20px
+  margin-right: 25px
+  margin-bottom: 25px
 
 .card-padding
   padding-left: 1rem
@@ -306,8 +301,13 @@ button[disabled=disabled]
 
 .input-form
   color:$gray
-  background-color:$card-background
-  border-color:  $card-border
+  background-color:$color-background
+  border-color: $card-border
+  border-radius: 1.5rem
+
+.input-form:hover
+  border-color:$blue
+
 .input-form::placeholder
   color:$gray
 
@@ -325,10 +325,18 @@ button[disabled=disabled]
   background-color: $button-orange !important
 
 .card
-  border: 1px solid $card-border
+  background-color:  $card-background
+  border-bottom: 1.5px solid $pink
+  border-radius: 1rem
 
-.card-background-color
-  background-color: $card-background
+.card:hover
+  box-shadow: 0px 8px 8px 0px  #6d37b38c
+  transform: scale(1.05, 1.05)
+
+.borders
+  border-top-left-radius: 1rem
+  border-top-right-radius: 1rem
+
 
 .size-item
   width: 50%
@@ -339,7 +347,7 @@ button[disabled=disabled]
 
 ::-webkit-scrollbar
   width: 12px
-  background-color: $card-background
+  background-color: $color-background
   border: 1px solid $card-border
 
 ::-webkit-scrollbar-thumb
@@ -353,7 +361,7 @@ pre
 
 pre code.hljs
   padding:0px !important
-  background-color:  $card-background
+  background-color:  $color-background
   border:1px solid $card-border
   border-radius: 10px
 
@@ -367,10 +375,6 @@ code.hljs
 
 .drop-shadow
   filter: drop-shadow(5px 5px 5px #6d37b38c)
-
-.card:hover
-  box-shadow: 0px 8px 8px 0px  #6d37b38c
-  transform: scale(1.05, 1.05)
 
 .box-shadow
   background: linear-gradient(150.26deg, rgb(64 23 85 / 70%) 1.7%, rgb(67 127 217 / 8%) 81.82%)
@@ -433,6 +437,8 @@ code.hljs
   .contact-me-buttom
     background: #9a3fdb
     color:  $white !important
+    border-top-left-radius: 1.5rem
+    border-bottom-left-radius: 1.5rem
 
   .contact-me-buttom:hover
     background: $button-color-hover
@@ -455,6 +461,11 @@ code.hljs
   .column.is-10, .column.is-10-tablet
     flex: none
     width: 78%
+
+  .background-mobile
+    display: flex
+    align-items: center
+    justify-content: center
 
   .contact-me-buttom
     background: #9a3fdb
@@ -481,14 +492,6 @@ code.hljs
     padding-left: 2rem !important
     padding-right: 2rem !important
 
-  .footer
-    background-color :$color-background !important
-    padding:  0rem !important
-    position: fixed
-    width: 100%
-    bottom: 0
-
-
 
   .navbar-menu
     background: $card-background
@@ -496,14 +499,8 @@ code.hljs
     padding-right: 30px
     margin-top: 3rem
 
-  .navbar-end
-    border-left:0px
-
   .item-nav
     padding-right: 10px
-
-  .borders
-    border-radius:25px
 
   .margin-left
     margin-left: 1rem
@@ -515,9 +512,12 @@ code.hljs
   .navbar-brand-side
     height: auto
 
+  .border-color
+    border-bottom: 1px solid $card-border
+
   .scroll-info
     padding-bottom: 3rem
-    height: 85vh
 
   .margin-projects
     margin-top: 0.8rem
+

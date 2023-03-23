@@ -1,0 +1,68 @@
+.block {
+  position: relative;
+  min-width: 100%;
+  min-height: 850px;
+  overflow: hidden;
+  background-color: black;
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.parallax-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.parallax-conf {
+  display: block;
+  opacity: 0.97;
+  border-radius: 5px;
+  filter: invert(14%) sepia(11%) saturate(2091%) hue-rotate(173deg)
+    brightness(94%) contrast(92%);
+  transition: all 0.3s ease;
+  animation: box 8s ease infinite;
+  &.big {
+    width: 120px;
+    height: 120px;
+  }
+  &.middle {
+    width: 45px;
+    height: 45px;
+  }
+  &.small {
+    width: 30px;
+    height: 30px;
+  }
+  &.tiny {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@keyframes box {
+  20% {
+    filter: invert(19%) sepia(43%) saturate(2435%) hue-rotate(165deg)
+      brightness(93%) contrast(101%);
+  }
+  40% {
+    filter: invert(10%) sepia(56%) saturate(786%) hue-rotate(206deg)
+      brightness(95%) contrast(94%);
+  }
+  60% {
+    filter: invert(11%) sepia(20%) saturate(3341%) hue-rotate(266deg)
+      brightness(90%) contrast(88%);
+  }
+  80% {
+    filter: invert(10%) sepia(10%) saturate(3501%) hue-rotate(283deg)
+      brightness(98%) contrast(89%);
+  }
+  100% {
+    filter: invert(14%) sepia(11%) saturate(2091%) hue-rotate(173deg)
+      brightness(94%) contrast(92%);
+  }
+}

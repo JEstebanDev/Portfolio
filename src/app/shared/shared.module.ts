@@ -22,6 +22,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { SnippetContactComponent } from './components/snippet-contact/snippet-contact.component';
 import { SnippetsComponent } from './components/snippets/snippets.component';
 import { MainComponent } from './pages/main/main.component';
+import { ParallaxItemDirective } from './directive/parallax-item.directive';
+import { ParallaxComponent } from './components/parallax/parallax.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { MainComponent } from './pages/main/main.component';
     SnippetContactComponent,
     SnippetsComponent,
     MainComponent,
+    ParallaxItemDirective,
+    ParallaxComponent,
   ],
   imports: [
     CommonModule,
