@@ -313,7 +313,7 @@ button[disabled=disabled]
 
 .list-project
   padding-top: 1rem
-  padding-left: 3rem
+  padding-left: 1rem
 
 .description-height
   display: flex
@@ -340,6 +340,11 @@ button[disabled=disabled]
 
 .size-item
   width: 50%
+
+.size-item-desktop
+  width: 50%
+  overflow-x: hidden
+
 
 .info-personal-info
     overflow-y: auto
@@ -474,6 +479,9 @@ code.hljs
   .contact-me-buttom:hover
     background: $button-color-hover
 
+  .list-project
+    padding-left: 3rem
+
 @media screen and ( max-width: $breakpoint )
   .item-nav
     border-right: none
@@ -495,8 +503,8 @@ code.hljs
 
   .navbar-menu
     background: $card-background
-    padding-left: 30px
-    padding-right: 30px
+    padding-left: 20px
+    padding-right: 20px
     margin-top: 3rem
 
   .item-nav
@@ -521,3 +529,5 @@ code.hljs
   .margin-projects
     margin-top: 0.8rem
 
+  .list-project
+    padding-left: 3rem
