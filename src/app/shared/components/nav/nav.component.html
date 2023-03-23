@@ -20,7 +20,7 @@
     <div class="blocker" [ngClass]="{'is-hidden':mobileNavbar==false}" (click)="hidePopup()"></div>
     <div class="navbar-menu stack-top borders" [ngClass]="{'is-active':mobileNavbar}">
       <div class="navbar-start">
-        <a (click)="router='home'" routerLink="/home" class="item-nav" [ngClass]="{'is-active':router=='home'}">
+        <a (click)="router='home'" routerLink="/" class="item-nav" [ngClass]="{'is-active':router==''}">
           Hello <i class="ml-1 ri-user-smile-line"></i>
         </a>
         <a (click)="router='about-me'" href="/about-me" class="item-nav" [ngClass]="{'is-active':router=='about-me'}">

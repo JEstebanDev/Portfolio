@@ -33,8 +33,12 @@ $fontPrincipal:'FiraCode'
 
 html
   background-color:$color-background
-
+  background-image: url('assets/background.svg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
 body
+
   font-family: $fontPrincipal !important
   height: 100%
   overflow-x: hidden
@@ -83,33 +87,24 @@ a:hover
 .size-font-small
   font-size: 12px
 
-.intro_jobs
-  color: $blue
-  line-height: 50px
-  height: 50px
-  overflow: hidden
+.role
+  text-align: left
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  padding: 10px
+  font-size: 22px
 
-.intro_jobs li
-  position: relative
-  top: 0
-  animation: change 4s steps(2) infinite
 
-.intro_jobs li::before
-  content: ''
-  left: 0
-  width: 100%
-  height: 100%
-  position: absolute
-  background: $color-background
-  animation: typing 2s steps(15) infinite
+.typing-text::after
+  content: "|"
+  animation: blink ease 1s infinite
+@keyframes blink
+  0%, 100%
+    opacity: 0
+  50%
+    opacity: 1
 
-@keyframes typing
-  100%
-    left: 110%
-
-@keyframes change
-  100%
-    top: -100px
 
 .footer
   background-color :#00000000
@@ -313,7 +308,7 @@ button[disabled=disabled]
 
 .list-project
   padding-top: 1rem
-  padding-left: 1rem
+  padding-left: 3rem
 
 .description-height
   display: flex
@@ -483,6 +478,12 @@ code.hljs
     padding-left: 3rem
 
 @media screen and ( max-width: $breakpoint )
+  html
+    background-color:$color-background
+    background-image: url('assets/background-phone.svg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
   .item-nav
     border-right: none
 
