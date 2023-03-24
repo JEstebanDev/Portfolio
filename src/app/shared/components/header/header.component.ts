@@ -7,51 +7,60 @@ declare function runGame(): any;
 })
 export class HeaderComponent implements OnInit {
   constructor() {}
+  text!: HTMLElement;
+  words = ['Full Stack Developer', 'UI & UX Designer'];
   ngOnInit(): void {
     runGame();
-    this.typeMessage();
+    this.text = document.querySelector('.typing-text')!;
+    this.setTyper(this.text, this.words);
   }
-  @ViewChild('mHTML') mHTML!: ElementRef;
+  setTyper(element: HTMLElement, words: string[]) {
+    const LETTER_TYPE_DELAY = 75;
+    const WORD_STAY_DELAY = 2000;
+    const DIRECTION_FORWARDS = 0;
+    const DIRECTION_BACKWARDS = 1;
+    let direction = DIRECTION_FORWARDS;
+    let wordIndex = 0;
+    let letterIndex = 0;
+    let wordTypeInterval: any;
 
-  messages: string[] = ['FullStack Developer', 'UI & UX Designer'];
-  currentMessageIndex = 0;
-  currentStr = '';
+    startTyping();
 
-  typeMessage(): void {
-    if (!this.messages[this.currentMessageIndex]) {
-      this.currentMessageIndex = 0;
+    function startTyping() {
+      wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
     }
-    this.currentStr = this.messages[this.currentMessageIndex];
-    const parts = this.currentStr.split('');
-    let part = '';
-    let currentLetterIndex = 0;
-    const int1 = setInterval(() => {
-      if (!parts[currentLetterIndex]) {
-        this.currentMessageIndex++;
-        setTimeout(() => {
-          this.deleteMessage(part);
-        }, 500);
-        clearInterval(int1);
-      } else {
-        part += parts[currentLetterIndex++];
-        this.mHTML.nativeElement.innerHTML = part;
-      }
-    }, 100);
-  }
 
-  deleteMessage(str: string): void {
-    const parts = str.split('');
-    const int = setInterval(() => {
-      if (parts.length === 0) {
-        setTimeout(() => {
-          this.typeMessage();
-        }, 500);
-        clearInterval(int);
-      } else {
-        parts.pop();
-        str = parts.join('');
-        this.mHTML.nativeElement.innerHTML = str;
+    function typeLetter() {
+      const word = words[wordIndex];
+
+      if (direction === DIRECTION_FORWARDS) {
+        letterIndex++;
+
+        if (letterIndex === word.length) {
+          direction = DIRECTION_BACKWARDS;
+          clearInterval(wordTypeInterval);
+          setTimeout(startTyping, WORD_STAY_DELAY);
+        }
+      } else if (direction === DIRECTION_BACKWARDS) {
+        letterIndex--;
+
+        if (letterIndex === 0) {
+          nextWord();
+        }
       }
-    }, 50);
+
+      const textToType = word.substring(0, letterIndex);
+      element.textContent = textToType;
+    }
+
+    function nextWord() {
+      letterIndex = 0;
+      direction = DIRECTION_FORWARDS;
+      wordIndex++;
+
+      if (wordIndex === words.length) {
+        wordIndex = 0;
+      }
+    }
   }
 }
