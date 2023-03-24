@@ -205,6 +205,9 @@ button[disabled=disabled]
   border-top-left-radius: 1.5rem
   border-bottom-left-radius: 1.5rem
 
+.special-padding
+  padding-top: 0.5rem
+  padding-bottom: 0.5rem
 
 .snippet-about-me
   margin-top: 0.8rem
@@ -332,6 +335,14 @@ button[disabled=disabled]
   border-top-left-radius: 1rem
   border-top-right-radius: 1rem
 
+.contact-me-buttom
+  background: #9a3fdb
+  color:  $white !important
+  border-top-left-radius: 1.5rem
+  border-bottom-left-radius: 1.5rem
+
+.contact-me-buttom:hover
+  background: $button-color-hover
 
 .size-item
   width: 50%
@@ -434,14 +445,26 @@ code.hljs
   .padding-snippet
     padding-top: 12rem
 
-  .contact-me-buttom
-    background: #9a3fdb
-    color:  $white !important
-    border-top-left-radius: 1.5rem
-    border-bottom-left-radius: 1.5rem
+@media screen and (min-width: 1185px) and (max-width: 1570px)
+  .typing-text
+    font-size: 25px !important
 
-  .contact-me-buttom:hover
-    background: $button-color-hover
+  .text-size
+    font-size: 0.8rem
+
+  .special-padding
+    padding-top: 0.3rem
+    padding-bottom: 0.3rem
+
+  .navbar-text
+    font-size: 16px
+
+  .text-size
+    font-size: 0.9rem
+
+  body
+    font-size: 0.8rem
+
 
 @media screen and (min-width: 1024px) and (max-width: 1185px)
 
@@ -467,15 +490,21 @@ code.hljs
     align-items: center
     justify-content: center
 
-  .contact-me-buttom
-    background: #9a3fdb
-    color: $white !important
-
-  .contact-me-buttom:hover
-    background: $button-color-hover
+  .typing-text
+    font-size: 24px !important
 
   .list-project
     padding-left: 3rem
+
+  .text-size
+    font-size: 0.8rem
+
+  body
+    font-size: 0.8rem
+
+  .special-padding
+    padding-top: 0.3rem
+    padding-bottom: 0.3rem
 
 @media screen and ( max-width: $breakpoint )
   html
@@ -499,10 +528,8 @@ code.hljs
     background-image: linear-gradient(rgba(0 0 0 / 45%), rgba(17 8 34 / 32%)),url(assets/images/profile-image.jpg)
 
   .info-header
-   // padding-top: 7rem !important
     padding-left: 2rem !important
     padding-right: 2rem !important
-
 
   .navbar-menu
     background: $card-background

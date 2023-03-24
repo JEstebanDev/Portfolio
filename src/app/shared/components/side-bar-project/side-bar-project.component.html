@@ -3,7 +3,7 @@
   <div class="info-personal-info pl-6">
     <form [formGroup]="form" novalidate>
       <div *ngFor="let topic of listProject; let i=index">
-        <label class="checkbox gray-color is-flex py-2 ">
+        <label class="checkbox gray-color is-flex special-padding">
           <input class="mr-2" type="checkbox" formArrayName="topics" [value]="topic.name|lowercase"
             (change)="onCheckboxChange($event)" />
           <img [src]="topic.url" width="20" height="20" /> <span class="pl-3">{{ topic.name}}</span>
@@ -18,7 +18,7 @@
   <div *ngIf="showItems" class="info-personal-info pl-6">
     <form class="is-flex is-flex-wrap-wrap" [formGroup]="form" novalidate>
       <div *ngFor="let topic of listProject; let i=index" class="size-item">
-        <label class="checkbox gray-color is-flex py-2 ">
+        <label class="checkbox gray-color is-flex py-2">
           <input class="mr-2" type="checkbox" formArrayName="topics" [value]="topic.name|lowercase"
             (change)="onCheckboxChange($event)" />
           <img [src]="topic.url" width="20" height="20" /> <span class="pl-3">{{ topic.name}}</span>
