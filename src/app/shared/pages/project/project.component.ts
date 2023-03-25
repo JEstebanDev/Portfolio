@@ -17,7 +17,7 @@ export class ProjectComponent implements OnInit {
   listRepositoriesCustom: ListRepositoriesCustom[] = [];
   filterList: ListRepositoriesCustom[] = [];
   ngOnInit(): void {
-    this.GitHubService.getListAdditionals().subscribe((repositories) => {
+    this.GitHubService.getListAdditional().subscribe((repositories) => {
       repositories.map((obj: any) => {
         this.listRepositoriesCustom.push({
           id: obj.id,

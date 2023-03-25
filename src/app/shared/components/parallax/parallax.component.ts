@@ -17,7 +17,7 @@ export class ParallaxComponent implements OnInit {
         rotate: '10',
         opacity: '1',
         inversion: 'true',
-        src: 'assets/icon-home/html.svg',
+        src: 'assets/icon-home/html.webp',
       },
       {
         top: '18%',
@@ -51,7 +51,7 @@ export class ParallaxComponent implements OnInit {
         rotate: '15',
         opacity: '1',
         movement: '0.087',
-        src: 'assets/icon-home/ts.svg',
+        src: 'assets/icon-home/ts.webp',
       },
       {
         top: '40%',
@@ -61,7 +61,7 @@ export class ParallaxComponent implements OnInit {
         opacity: '1',
         inversion: 'true',
         movement: '0.087',
-        src: 'assets/icon-home/kubernetes.svg',
+        src: 'assets/icon-home/kubernetes.webp',
       },
       {
         top: '45%',
@@ -70,7 +70,7 @@ export class ParallaxComponent implements OnInit {
         size: 'middle',
         rotate: '20',
         opacity: '0.87',
-        src: 'assets/icon-home/redux.svg',
+        src: 'assets/icon-home/redux.webp',
       },
       {
         top: '10%',
@@ -78,7 +78,7 @@ export class ParallaxComponent implements OnInit {
         size: 'middle',
         rotate: '20',
         opacity: '1',
-        src: 'assets/icon-home/graphql.svg',
+        src: 'assets/icon-home/graphql.webp',
       },
       {
         top: '85%',
@@ -96,7 +96,7 @@ export class ParallaxComponent implements OnInit {
         rotate: '-30',
         inversion: 'true',
         opacity: '1',
-        src: 'assets/icon-home/postgresql.svg',
+        src: 'assets/icon-home/postgresql.webp',
       },
       {
         top: '65%',
@@ -104,7 +104,7 @@ export class ParallaxComponent implements OnInit {
         size: 'middle',
         rotate: '20',
         opacity: '1',
-        src: 'assets/icon-home/java.svg',
+        src: 'assets/icon-home/java.webp',
       },
       {
         top: '14%',
@@ -114,7 +114,7 @@ export class ParallaxComponent implements OnInit {
         opacity: '1',
         inversion: 'true',
         movement: '0.087',
-        src: 'assets/icon-home/react.svg',
+        src: 'assets/icon-home/react.webp',
       },
     ];
   }
