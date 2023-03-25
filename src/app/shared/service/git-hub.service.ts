@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GetAllRepositories } from '../interface/getAllRepositories.interface';
+import { TransferStateService } from '@scullyio/ng-lib';
 
 @Injectable({
   providedIn: 'root',
@@ -9,9 +10,15 @@ export class GitHubService {
   private _urlBackendApi: string =
     'https://api.github.com/users/jestebandev/repos?sort=created';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private transferState: TransferStateService
+  ) {}
 
-  getListAdditionals() {
-    return this.http.get<GetAllRepositories>(`${this._urlBackendApi}`);
+  getListAdditional() {
+    return this.transferState.useScullyTransferState(
+      'projects',
+      this.http.get<GetAllRepositories>(`${this._urlBackendApi}`)
+    );
   }
 }

@@ -18,7 +18,9 @@ $gray: #607B96
 $color-background:#0b0618
 $card-background:#150526
 $navbar-background:#1d0f38
+$snippet-background:#0b06188c
 $card-border:#2c1e3d
+$border-color:#473162
 $button-color:#9a3fdb
 $button-color-hover: #37005e
 
@@ -33,8 +35,12 @@ $fontPrincipal:'FiraCode'
 
 html
   background-color:$color-background
-
+  background-image: url('assets/background.svg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
 body
+
   font-family: $fontPrincipal !important
   height: 100%
   overflow-x: hidden
@@ -83,33 +89,23 @@ a:hover
 .size-font-small
   font-size: 12px
 
-.intro_jobs
-  color: $blue
-  line-height: 50px
-  height: 50px
-  overflow: hidden
+.role
+  text-align: left
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  padding: 10px
+  font-size: 22px
 
-.intro_jobs li
-  position: relative
-  top: 0
-  animation: change 4s steps(2) infinite
+.typing-text::after
+  content: "|"
+  animation: blink ease 1s infinite
 
-.intro_jobs li::before
-  content: ''
-  left: 0
-  width: 100%
-  height: 100%
-  position: absolute
-  background: $color-background
-  animation: typing 2s steps(15) infinite
-
-@keyframes typing
-  100%
-    left: 110%
-
-@keyframes change
-  100%
-    top: -100px
+@keyframes blink
+  0%, 100%
+    opacity: 0
+  50%
+    opacity: 1
 
 .footer
   background-color :#00000000
@@ -117,7 +113,6 @@ a:hover
   position: fixed
   width: 100%
   bottom: 0
-
 
 .subtitle-header
   font-weight: 450
@@ -210,6 +205,9 @@ button[disabled=disabled]
   border-top-left-radius: 1.5rem
   border-bottom-left-radius: 1.5rem
 
+.special-padding
+  padding-top: 0.5rem
+  padding-bottom: 0.5rem
 
 .snippet-about-me
   margin-top: 0.8rem
@@ -255,7 +253,7 @@ button[disabled=disabled]
   height: 90vh
 
 .border-color
-  border-right: 1px solid $card-border
+  border-right: 1px solid $border-color
 
 .game
   border-radius: 35px
@@ -301,7 +299,7 @@ button[disabled=disabled]
 
 .input-form
   color:$gray
-  background-color:$color-background
+  background-color:$snippet-background
   border-color: $card-border
   border-radius: 1.5rem
 
@@ -313,7 +311,7 @@ button[disabled=disabled]
 
 .list-project
   padding-top: 1rem
-  padding-left: 1rem
+  padding-left: 3rem
 
 .description-height
   display: flex
@@ -337,6 +335,14 @@ button[disabled=disabled]
   border-top-left-radius: 1rem
   border-top-right-radius: 1rem
 
+.contact-me-buttom
+  background: #9a3fdb
+  color:  $white !important
+  border-top-left-radius: 1.5rem
+  border-bottom-left-radius: 1.5rem
+
+.contact-me-buttom:hover
+  background: $button-color-hover
 
 .size-item
   width: 50%
@@ -366,8 +372,8 @@ pre
 
 pre code.hljs
   padding:0px !important
-  background-color:  $color-background
-  border:1px solid $card-border
+  background-color: $snippet-background
+  border:1px solid $border-color
   border-radius: 10px
 
 code.hljs
@@ -439,14 +445,26 @@ code.hljs
   .padding-snippet
     padding-top: 12rem
 
-  .contact-me-buttom
-    background: #9a3fdb
-    color:  $white !important
-    border-top-left-radius: 1.5rem
-    border-bottom-left-radius: 1.5rem
+@media screen and (min-width: 1185px) and (max-width: 1570px)
+  .typing-text
+    font-size: 25px !important
 
-  .contact-me-buttom:hover
-    background: $button-color-hover
+  .text-size
+    font-size: 0.8rem
+
+  .special-padding
+    padding-top: 0.3rem
+    padding-bottom: 0.3rem
+
+  .navbar-text
+    font-size: 16px
+
+  .text-size
+    font-size: 0.9rem
+
+  body
+    font-size: 0.8rem
+
 
 @media screen and (min-width: 1024px) and (max-width: 1185px)
 
@@ -472,34 +490,48 @@ code.hljs
     align-items: center
     justify-content: center
 
-  .contact-me-buttom
-    background: #9a3fdb
-    color: $white !important
-
-  .contact-me-buttom:hover
-    background: $button-color-hover
+  .typing-text
+    font-size: 24px !important
 
   .list-project
     padding-left: 3rem
 
+  .text-size
+    font-size: 0.8rem
+
+  body
+    font-size: 0.8rem
+
+  .special-padding
+    padding-top: 0.3rem
+    padding-bottom: 0.3rem
+  .navbar-text
+    font-size: 15px
+
 @media screen and ( max-width: $breakpoint )
+  html
+    background-color:$color-background
+    background-image: url('assets/background-phone.svg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
   .item-nav
     border-right: none
 
   .description-mobile
     font-size: 13px
 
+  .typing-text
+    font-size: 24px !important
   .background-mobile
     height: 90vh
     margin-top: 12px
     background-size: cover
-    background-image: linear-gradient(rgba(0 0 0 / 45%), rgba(17 8 34 / 32%)),url(assets/images/profile-image.jpg)
+    background-image: linear-gradient(rgba(0 0 0 / 45%), rgba(17 8 34 / 32%)),url(assets/images/profile-image.webp)
 
   .info-header
-   // padding-top: 7rem !important
     padding-left: 2rem !important
     padding-right: 2rem !important
-
 
   .navbar-menu
     background: $card-background
@@ -521,7 +553,7 @@ code.hljs
     height: auto
 
   .border-color
-    border-bottom: 1px solid $card-border
+    border-bottom: 1px solid $border-color
 
   .scroll-info
     padding-bottom: 3rem

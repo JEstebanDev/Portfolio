@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class NavComponent implements OnInit {
   constructor(private route: Router) {}
   router: string = '';
+
   ngOnInit() {
     this.router = this.route.url.split('/', 2)[1];
   }

@@ -17,7 +17,7 @@ export class ProjectComponent implements OnInit {
   listRepositoriesCustom: ListRepositoriesCustom[] = [];
   filterList: ListRepositoriesCustom[] = [];
   ngOnInit(): void {
-    this.GitHubService.getListAdditionals().subscribe((repositories) => {
+    this.GitHubService.getListAdditional().subscribe((repositories) => {
       repositories.map((obj: any) => {
         this.listRepositoriesCustom.push({
           id: obj.id,
@@ -72,44 +72,40 @@ export class ProjectComponent implements OnInit {
   }
 
   ListTopics: Topics[] = [
-    { id: 1, name: 'HTML', url: 'assets/icon-projects/html.svg' },
-    { id: 2, name: 'CSS', url: 'assets/icon-projects/css.svg' },
-    { id: 3, name: 'Sass', url: 'assets/icon-projects/sass.svg' },
-    { id: 4, name: 'JavaScript', url: 'assets/icon-projects/javascript.svg' },
-    { id: 5, name: 'TypeScript', url: 'assets/icon-projects/typescript.svg' },
-    { id: 6, name: 'Angular', url: 'assets/icon-projects/angular.svg' },
-    { id: 7, name: 'React', url: 'assets/icon-projects/react.svg' },
-    { id: 8, name: 'NextJs', url: 'assets/icon-projects/nextjs.svg' },
-    { id: 9, name: 'Java', url: 'assets/icon-projects/java.svg' },
-    { id: 10, name: 'SpringBoot', url: 'assets/icon-projects/spring.svg' },
-    { id: 11, name: 'Csharp', url: 'assets/icon-projects/csharp.svg' },
-    { id: 12, name: 'NodeJs', url: 'assets/icon-projects/nodejs.svg' },
-    { id: 13, name: 'Dart', url: 'assets/icon-projects/dart.svg' },
-    { id: 14, name: 'Flutter', url: 'assets/icon-projects/flutter.svg' },
-    { id: 15, name: 'Redux', url: 'assets/icon-projects/redux.svg' },
-    { id: 16, name: 'Graphql', url: 'assets/icon-projects/graphql.svg' },
-    { id: 17, name: 'SqlServer', url: 'assets/icon-projects/sqlserver.svg' },
-    { id: 18, name: 'MySql', url: 'assets/icon-projects/mysql.svg' },
-    { id: 19, name: 'PostgreSQL', url: 'assets/icon-projects/postgresql.svg' },
-    { id: 20, name: 'MongoDB', url: 'assets/icon-projects/mongodb.svg' },
-    { id: 21, name: 'FireBase', url: 'assets/icon-projects/firebase.svg' },
-    { id: 22, name: 'AWS', url: 'assets/icon-projects/devops-aws.svg' },
-    { id: 23, name: 'Azure', url: 'assets/icon-projects/devops-azure.svg' },
-    { id: 24, name: 'Docker', url: 'assets/icon-projects/devops-docker.svg' },
-    { id: 25, name: 'Jenkins', url: 'assets/icon-projects/devops-jenkins.svg' },
+    { id: 1, name: 'JavaScript', url: 'assets/icon-projects/javascript.svg' },
+    { id: 2, name: 'TypeScript', url: 'assets/icon-projects/typescript.svg' },
+    { id: 3, name: 'Angular', url: 'assets/icon-projects/angular.svg' },
+    { id: 4, name: 'React', url: 'assets/icon-projects/react.svg' },
+    { id: 5, name: 'NextJs', url: 'assets/icon-projects/nextjs.svg' },
+    { id: 6, name: 'Java', url: 'assets/icon-projects/java.svg' },
+    { id: 7, name: 'Csharp', url: 'assets/icon-projects/csharp.svg' },
+    { id: 8, name: 'NodeJs', url: 'assets/icon-projects/nodejs.svg' },
+    { id: 9, name: 'Dart', url: 'assets/icon-projects/dart.svg' },
+    { id: 10, name: 'Flutter', url: 'assets/icon-projects/flutter.svg' },
+    { id: 11, name: 'Redux', url: 'assets/icon-projects/redux.svg' },
+    { id: 12, name: 'Graphql', url: 'assets/icon-projects/graphql.svg' },
+    { id: 13, name: 'SqlServer', url: 'assets/icon-projects/sqlserver.svg' },
+    { id: 14, name: 'MySql', url: 'assets/icon-projects/mysql.svg' },
+    { id: 15, name: 'PostgreSQL', url: 'assets/icon-projects/postgresql.svg' },
+    { id: 16, name: 'MongoDB', url: 'assets/icon-projects/mongodb.svg' },
+    { id: 17, name: 'FireBase', url: 'assets/icon-projects/firebase.svg' },
+    { id: 18, name: 'AWS', url: 'assets/icon-projects/devops-aws.svg' },
+    { id: 19, name: 'Azure', url: 'assets/icon-projects/devops-azure.svg' },
+    { id: 20, name: 'Docker', url: 'assets/icon-projects/devops-docker.svg' },
+    { id: 21, name: 'Jenkins', url: 'assets/icon-projects/devops-jenkins.svg' },
     {
-      id: 26,
+      id: 22,
       name: 'Kubernetes',
       url: 'assets/icon-projects/devops-kubernetes.svg',
     },
     {
-      id: 27,
+      id: 23,
       name: 'Terraform',
       url: 'assets/icon-projects/devops-terraform.svg',
     },
-    { id: 28, name: 'Ansible', url: 'assets/icon-projects/devops-ansible.svg' },
+    { id: 24, name: 'Ansible', url: 'assets/icon-projects/devops-ansible.svg' },
     {
-      id: 29,
+      id: 25,
       name: 'Prometheus',
       url: 'assets/icon-projects/devops-prometheus.svg',
     },
