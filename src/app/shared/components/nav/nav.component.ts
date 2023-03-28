@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +8,14 @@ import { Router } from '@angular/router';
   styles: [],
 })
 export class NavComponent implements OnInit {
-  constructor(private route: Router) {}
+  constructor(private route: Router) {
+    route.events
+      .pipe(filter((event: any) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.router = event.url.split('/', 2)[1];
+      });
+  }
   router: string = '';
-
   ngOnInit() {
     this.router = this.route.url.split('/', 2)[1];
   }
